@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Songs</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #a3e4f5, #b6f3ea);
+      background-image: url('music/backgroundlogo.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: #000;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 60px;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 600;
+      color: #000;
+    }
+
+    .search-bar {
+      width: 400px;
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 25px;
+      padding: 8px 15px;
+    }
+
+    .search-bar input {
+      border: none;
+      background: none;
+      outline: none;
+      width: 100%;
+      font-size: 16px;
+      padding-left: 10px;
+    }
+
+    .search-bar i {
+      color: #333;
+      font-size: 18px;
+    }
+
+    .songs-section {
+      padding: 30px 80px;
+    }
+
+    .songs-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .songs-header h2 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .play-all {
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .play-all:hover {
+      background: #333;
+    }
+
+    .songs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .song-card {
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 15px;
+      padding: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .song-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .song-card img {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+      margin-right: 15px;
+      object-fit: cover;
+    }
+
+    .song-info p {
+      margin: 0;
+      line-height: 1.3;
+    }
+
+    .song-title {
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .song-artist {
+      font-size: 13px;
+      color: #555;
+    }
+    @media (max-width: 900px) {
+      .songs-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="library.html" style="text-decoration:none; color:#000; font-weight:600;">← Back to Library</a>
+    <h1>All Songs</h1>
+    <div class="search-bar">
+      <i>🔍</i>
+      <input type="text" placeholder="Search songs...">
+    </div>
+  </header>
+
+  <section class="songs-section">
+    <div class="songs-header">
+      <h2>Songs</h2>
+      <button class="play-all">▶ Play All (16)</button>
+    </div>
+
+    <div class="songs-grid">
+      <div class="song-card">
+        <img src="music/multo.png" alt="Cup of Joe">
+        <div class="song-info">
+          <p class="song-title">Multo – Cup of Joe (Official lyric video)</p>
+          <p class="song-artist">Cup of Joe</p>
+        </div>
+      </div>
+
+      <div class="song-card">
+        <img src="music/naiilang.png" alt="Lee John">
+        <div class="song-info">
+          <p class="song-title">Naiilang – Lee John (Official lyric video)</p>
+          <p class="song-artist">Lee John</p>
+        </div>
+      </div>
+
+      <div class="song-card">
+        <img src="music/museo.png" alt="Eliza Maturan">
+        <div class="song-info">
+          <p class="song-title">Museo – Eliza Maturan (Official lyric video)</p>
+          <p class="song-artist">Eliza Maturan</p>
+        </div>
+      </div>
+
+      <div class="song-card">
+        <img src="music/aura.png" alt="IV of Spades">
+        <div class="song-info">
+          <p class="song-title">Aura – IV of Spades (Official lyric video)</p>
+          <p class="song-artist">IV of Spades</p>
+        </div>
+      </div>
+
+      <div class="song-card">
+        <img src="music/upuan.png" alt="Gloc 9">
+        <div class="song-info">
+          <p class="song-title">Upuan – Gloc 9 ft. Jeazell Grutas</p>
+          <p class="song-artist">Gloc 9</p>
+        </div>
+      </div>
+
+      <div class="song-card">
+        <img src="music/let her go.png" alt="Passenger">
+        <div class="song-info">
+          <p class="song-title">Passenger – Let Her Go (Official video)</p>
+          <p class="song-artist">Passenger</p>
+        </div>
+      </div>
+
+      <div class="song-card">
+        <img src="music/ikaw lang.png" alt="Nobita">
+        <div class="song-info">
+          <p class="song-title">Nobita – Ikaw Lang (Official lyric video)</p>
+          <p class="song-artist">Nobita</p>
+        </div>
+      </div>
+
+      <div class="song-card">
+        <img src="music/upside down.png" alt="6cyclemind">
+        <div class="song-info">
+          <p class="song-title">Upside Down – 6cyclemind</p>
+          <p class="song-artist">6cyclemind</p>
+        </div>
+      </div>
+
+      <div class="song-card">
+        <img src="music/mundo.png" alt="IV of Spades">
+        <div class="song-info">
+          <p class="song-title">Mundo – IV of Spades</p>
+          <p class="song-artist">IV of Spades</p>
+        </div>
+      </div>
+
+      <div class="song-card">
+        <img src="music/rewrite the stars.png" alt="Anne-Marie and James Arthur">
+        <div class="song-info">
+          <p class="song-title">Rewrite the Stars – Anne-Marie & James Arthur</p>
+          <p class="song-artist">James Arthur</p>
+        </div>
+      </div>
+
+      <div class="song-card">
+        <img src="music/leonora.png" alt="Leonora">
+        <div class="song-info">
+          <p class="song-title">Sugarcane – Leonora (Official music video)</p>
+          <p class="song-artist">Sugarcane</p>
+        </div>
+      </div>
+
+      <div class="song-card">
+        <img src="music/supernova.png" alt="Supernova">
+        <div class="song-info">
+          <p class="song-title">Supernova</p>
+          <p class="song-artist">Aespa</p>
+        </div>
+      </div>
+      
+      <div class="song-card">
+        <img src="music/supershy.png" alt="Super Shy">
+        <div class="song-info">
+          <p class="song-title">Super Shy</p>
+          <p class="song-artist">NewJeans</p>
+        </div>
+      </div>
+
+      <div class="song-card">
+        <img src="music/poison.png" alt="Poison">
+        <div class="song-info">
+          <p class="song-title">Poison</p>
+          <p class="song-artist">Brent Faiyaz</p>
+        </div>
+      </div>
+
+      <div class="song-card">
+        <img src="music/loveme.png" alt="Love me">
+        <div class="song-info">
+          <p class="song-title">Love me</p>
+          <p class="song-artist">Realestk</p>
+        </div>
+      </div>
+      
+      <div class="song-card">
+        <img src="music/superpower.png" alt="Superpower">
+        <div class="song-info">
+          <p class="song-title">Superpower</p>
+          <p class="song-artist">Daniel Ceasar</p>
+        </div>
+    </div>
+  </section>
+</body>
+</html>
+
